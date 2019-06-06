@@ -7,6 +7,8 @@
         <link href="../../assets/css/resCarousel.css" rel="stylesheet" type="text/css"/>
         <script src="../../assets/js/resCarousel.min.js" type="text/javascript"></script>
         <script src="../../assets/js/resCarousel.js" type="text/javascript"></script>
+<link href="assets/css/mainSite.css" rel="stylesheet" type="text/css"/>
+
 
     <head><title>Call us for home service !</title></head>
     <body>
