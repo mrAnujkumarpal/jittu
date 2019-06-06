@@ -69,7 +69,6 @@
 </head>
 
 <body>
-    <p class="text-center">ResCarousel<small> By<a href="http://creativetechsoft.com"> CreativeTechSoft</a></small></p>
 
 <%--
     <!--home-->
@@ -140,7 +139,6 @@
 --%>
 
     <div class="container-fluid p0">
-        <h4>data-items="1-1-1-1" data-slide="1" data-speed="700" data-interval="4000"</h4>
         <div class="resCarousel" data-items="1-1-1-1" data-slide="1" data-speed="700" data-interval="4000">
             <div class="resCarousel-inner banner">
 
@@ -881,7 +879,6 @@
             }
         });
     </script>
-    <script src="js/resCarousel.js"></script>
 </body>
 
 </html>

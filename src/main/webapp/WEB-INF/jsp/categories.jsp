@@ -3,10 +3,33 @@
 <!doctype html>
 <html lang="en">
     <head><title>Sub Categories</title></head>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <link href="../../assets/css/mainSite.css" rel="stylesheet" type="text/css"/>
+            <link href="../../assets/css/resCarousel.css" rel="stylesheet" type="text/css"/>
+            <script src="../../assets/js/resCarousel.min.js" type="text/javascript"></script>
+            <script src="../../assets/js/resCarousel.js" type="text/javascript"></script>
     <body>
-        <link href="../../assets/css/mainSite.css" rel="stylesheet" type="text/css"/>
+
         <%@include file="/WEB-INF/jsp/common/header.jsp"%>
-        <div class="container-fluid" style=" margin-top:150px;">
+        <div class="container-fluid p0">
+                <div class="resCarousel" data-items="1-1-1-1" data-slide="1" data-speed="700" data-interval="4000">
+                    <div class="resCarousel-inner banner">
+                        <c:forEach var="caroList" items="${carouselList}">
+                             <div class="item" style="background: url('data:image/jpeg;base64,${caroList.base64}'); center top no-repeat;">
+                            <div>
+                                  <h1>  ${caroList.carousel_quotes} !!*!! ${caroList.mainCategory.cate_name}
+                                  <br/>
+                                   ${caroList.carousel_heading}</h1>
+                            </div>
+                        </div>
+                        </c:forEach>
+                    </div>
+                    <button class='btn btn-default leftRs'><</button>
+                    <button class='btn btn-default rightRs'>></button>
+                </div>
+            </div>
+
+        <div class="container-fluid" style=" margin-top:15px;">
 
 
             <ul class="nav nav-tabs">

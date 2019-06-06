@@ -2,80 +2,35 @@
 
 <!doctype html>
 <html lang="en">
-    <head><title>Hello, world!</title></head>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <link href="../../assets/css/resCarousel.css" rel="stylesheet" type="text/css"/>
+        <script src="../../assets/js/resCarousel.min.js" type="text/javascript"></script>
+        <script src="../../assets/js/resCarousel.js" type="text/javascript"></script>
+
+    <head><title>Call us for home service !</title></head>
     <body>
 
         <%@include file="/WEB-INF/jsp/common/header.jsp"%>
 
-        <h1>Hello, world!</h1>
 
-
-        <div id="demo" class="carousel slide" data-ride="carousel">
-            <ul class="carousel-indicators">
-                <li data-target="#demo" data-slide-to="0" class="active"></li>
-                <li data-target="#demo" data-slide-to="1"></li>
-                <li data-target="#demo" data-slide-to="2"></li>
-            </ul>
-
-            <div class="carousel-inner">
+ <div class="container-fluid p0">
+        <div class="resCarousel" data-items="1-1-1-1" data-slide="1" data-speed="700" data-interval="4000">
+            <div class="resCarousel-inner banner">
                 <c:forEach var="caroList" items="${carouselList}">
-                    <div class="carousel-item">
-                        <img class="mx-auto d-block" src="data:image/jpeg;base64,${caroList.base64}" width="100%">
-                        <div class="carousel-caption">
-                            <h3>${caroList.carousel_heading}</h3>
-                            <p>${caroList.carousel_quotes} !!*!! ${caroList.mainCategory.cate_name}</p>
-                        </div>   
-                    </div>
-                </c:forEach>
-            </div>
-            <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#demo" data-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </a>
-        </div>
-
-        <header>
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner" role="listbox">
-                    <!-- Slide One - Set the background image for this slide in the line below -->
-                    <div class="carousel-item active" style="background-image: url('https://3.bp.blogspot.com/-_7vaKiNZPXk/XCWoF-0xj7I/AAAAAAAAAMk/Bx7Ne5WLEvINHPDoG1jwY6rGO2d62pprwCKgBGAs/s1600/ux-design.jpeg')">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h2 class="display-4">First Slide</h2>
-                            <p class="lead">This is a description for the first slide.</p>
-                        </div>
-                    </div>
-                    <!-- Slide Two - Set the background image for this slide in the line below -->
-                    <div class="carousel-item" style="background-image: url('https://4.bp.blogspot.com/-InDD3Hm_bhU/XB4_TK3TT7I/AAAAAAAAAJ4/r5tUeCOqq1MTchFh7D7pWdf582A4qYIIwCEwYBhgL/s1600/Businesswoman-working-at-a-computer-1280x720.jpg')">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h2 class="display-4">Second Slide</h2>
-                            <p class="lead">This is a description for the second slide.</p>
-                        </div>
-                    </div>
-                    <!-- Slide Three - Set the background image for this slide in the line below -->
-                    <div class="carousel-item" style="background-image: url('https://1.bp.blogspot.com/-GWl5F8P4t-8/XB4_VV4VE5I/AAAAAAAAAKE/SmHRzas-LpMpDBoLn6otR9AznVsr6L7OgCEwYBhgL/s1600/t1larg.africa.cnn.jpg')">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h2 class="display-4">Third Slide</h2>
-                            <p class="lead">This is a description for the third slide.</p>
-                        </div>
+                     <div class="item" style="background: url('data:image/jpeg;base64,${caroList.base64}'); center top no-repeat;">
+                    <div>
+                          <h1>  ${caroList.carousel_quotes} !!*!! ${caroList.mainCategory.cate_name}
+                          <br/>
+                           ${caroList.carousel_heading}</h1>
                     </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+                </c:forEach>
             </div>
-        </header>
+            <button class='btn btn-default leftRs'><</button>
+            <button class='btn btn-default rightRs'>></button>
+        </div>
+    </div>
 
         <!-- Page Content -->
 

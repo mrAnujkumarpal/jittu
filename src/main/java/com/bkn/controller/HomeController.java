@@ -37,19 +37,32 @@ public class HomeController {
         SubCategory subCategory= adminService.getSubCategoryBySubCateID(subcate_id);
         System.out.println("subcate_id " + subCategory.getSubcate_id());
         System.out.println("parent ID " + subCategory.getMainCategory().getCate_id());
-
-        List<SubCategory> subCategoryList=adminService.getAllSubCategoryByMainCateory(subCategory.getMainCategory().getCate_id());
+        int mainCatId=subCategory.getMainCategory().getCate_id();
+        List<SubCategory> subCategoryList=adminService.getAllSubCategoryByMainCateory(mainCatId);
         System.out.println(" SubCategory " + subCategoryList.size());
         mv.addObject("subCategoryList",subCategoryList);
 
-        /*
-        * main category id find krne h subCategory table se on the
-        * above id
-        */
+        System.out.println(" mainCatId " + mainCatId);
+
+        List<Carousel> carouselList4Page= homeService.carosuleListByMainCategoryId(mainCatId);
+        if (carouselList4Page != null) {
+            for (Carousel carosule : carouselList4Page) {
+                byte[] encodeBase64 = Base64.encodeBase64(carosule.getCarousel_image());
+                String base64Encoded = "";
+                try {
+                    base64Encoded = new String(encodeBase64, "UTF-8");
+                } catch (Exception eee) {
+                    String message = eee.getMessage();
+                    System.out.println("Exception message " + message);
+                }
+                carosule.setBase64(base64Encoded);
+            }
+        }
+        mv.addObject("carouselList",carouselList4Page);
+
+
 
         List<Product> productList=adminService.getAllProductsBySubCateory(subcate_id);
-
-
 
         System.out.println(" productList " + productList.size());
         mv.addObject("productList",productList);
@@ -62,7 +75,22 @@ public class HomeController {
     @RequestMapping(value = "/service/{id}", method = RequestMethod.GET)
     public ModelAndView requestedProducts(@PathVariable("id") int cate_id) {
         ModelAndView mv = new ModelAndView("categories");
-
+        List<Carousel> carouselList4Page= homeService.carosuleListByMainCategoryId(cate_id);
+        if (carouselList4Page != null) {
+            for (Carousel carosule : carouselList4Page) {
+                byte[] encodeBase64 = Base64.encodeBase64(carosule.getCarousel_image());
+                String base64Encoded = "";
+                try {
+                    base64Encoded = new String(encodeBase64, "UTF-8");
+                } catch (Exception eee) {
+                    String message = eee.getMessage();
+                    System.out.println("Exception message " + message);
+                }
+                carosule.setBase64(base64Encoded);
+            }
+        }
+        System.out.println(" cate_id " + cate_id);
+        mv.addObject("carouselList",carouselList4Page);
         List<SubCategory> subCategoryList=adminService.getAllSubCategoryByMainCateory(cate_id);
         System.out.println(" SubCategory " + subCategoryList.size());
         mv.addObject("subCategoryList",subCategoryList);
