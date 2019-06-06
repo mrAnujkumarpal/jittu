@@ -1,10 +1,7 @@
 package com.bkn.service.admin;
 
 
-import com.bkn.model.Carousel;
-import com.bkn.model.MainCategory;
-import com.bkn.model.Product;
-import com.bkn.model.SubCategory;
+import com.bkn.model.*;
 
 import java.util.List;
 
@@ -13,6 +10,8 @@ public interface AdminService {
     public void addMainCategory(MainCategory mainCategory);
 
     public void addSubCategory(SubCategory subCategory);
+
+    public  void  saveCustomerReview(Review review);
 
     public  void addNewProduct(Product product);
 

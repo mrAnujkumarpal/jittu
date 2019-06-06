@@ -29,7 +29,7 @@
                 </div>
             </div>
 
-        <div class="container-fluid" style=" margin-top:15px;">
+        <div class="container-fluid" style=" margin-top:10px;">
 
 
             <ul class="nav nav-tabs">
@@ -73,7 +73,7 @@
                     <div class="row">
                         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 commitmentDecription">
                             <div class="">
-                                <i class="fa fa-clock-o fa-2x" aria-hidden="true"></i> 
+                                <i class="fa fa-clock-o fa-2x" aria-hidden="true"></i>
                                 <span class="oueCommitment">Fast & On Time Service</span>
                                 <div class="commitDesc"> We provide only verified, background checked and high quality professionals</div>
                             </div>

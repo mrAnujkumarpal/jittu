@@ -11,7 +11,7 @@
 <link href="assets/css/main.css" rel="stylesheet" type="text/css"/>
 
 
-<nav class="navbar navbar-expand-md navbar-dark  bg-dark fixed-top">
+<nav class="navbar navbar-expand-md fixed-top" style="background-color:#007b5e;">
     <div class="container">
         <a class="navbar-brand" href="#">
             <img src="http://placehold.it/150x50?text=Logo" alt="">

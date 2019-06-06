@@ -4,10 +4,10 @@
 <html lang="en">
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-        <link href="../../assets/css/resCarousel.css" rel="stylesheet" type="text/css"/>
-        <script src="../../assets/js/resCarousel.min.js" type="text/javascript"></script>
-        <script src="../../assets/js/resCarousel.js" type="text/javascript"></script>
-<link href="assets/css/mainSite.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/css/resCarousel.css" rel="stylesheet" type="text/css"/>
+    <script src="assets/js/resCarousel.min.js" type="text/javascript"></script>
+    <script src="assets/js/resCarousel.js" type="text/javascript"></script>
+    <link href="assets/css/mainSite.css" rel="stylesheet" type="text/css"/>
 
 
     <head><title>Call us for home service !</title></head>
@@ -16,23 +16,23 @@
         <%@include file="/WEB-INF/jsp/common/header.jsp"%>
 
 
- <div class="container-fluid p0">
-        <div class="resCarousel" data-items="1-1-1-1" data-slide="1" data-speed="700" data-interval="4000">
-            <div class="resCarousel-inner banner">
-                <c:forEach var="caroList" items="${carouselList}">
-                     <div class="item" style="background: url('data:image/jpeg;base64,${caroList.base64}'); center top no-repeat;">
-                    <div>
-                          <h1>  ${caroList.carousel_quotes} !!*!! ${caroList.mainCategory.cate_name}
-                          <br/>
-                           ${caroList.carousel_heading}</h1>
-                    </div>
+        <div class="container-fluid p0">
+            <div class="resCarousel" data-items="1-1-1-1" data-slide="1" data-speed="700" data-interval="4000">
+                <div class="resCarousel-inner banner">
+                    <c:forEach var="caroList" items="${carouselList}">
+                        <div class="item" style="background: url('data:image/jpeg;base64,${caroList.base64}'); center top no-repeat;">
+                            <div>
+                                <h1>  ${caroList.carousel_quotes} !!*!! ${caroList.mainCategory.cate_name}
+                                    <br/>
+                                    ${caroList.carousel_heading}</h1>
+                            </div>
+                        </div>
+                    </c:forEach>
                 </div>
-                </c:forEach>
+                <button class='btn btn-default leftRs'><</button>
+                <button class='btn btn-default rightRs'>></button>
             </div>
-            <button class='btn btn-default leftRs'><</button>
-            <button class='btn btn-default rightRs'>></button>
         </div>
-    </div>
 
         <!-- Page Content -->
 
@@ -69,80 +69,37 @@
             <div class="container-fluid">
                 <h3 class="text-center mb-4 p-4 text-secondary">What Customers Are Saying About Our service</h3>
 
-
-
-
                 <div class="row">
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                        <div class="card pmd-card">
-                            <div class="card-header d-flex flex-row pmd-card-border">
-                                <a class="pmd-avatar-list-img" href="javascript:void(0);">
-                                    <img src="https://source.unsplash.com/9UVmlIb0wJU/500x350"class="rounded-circle" width="50" height="50" style="margin-right: 15px;">
-                                </a>
-                                <div class="media-body">
-                                    <h4 class="card-title">Two-line item</h4>
-                                    <p class="card-subtitle">Secondary text</p>
+
+                    <c:forEach var="customerReview" items="${customerReview}">
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">                        
+                            <div class="card pmd-card">
+                                <div class="card-header d-flex flex-row pmd-card-border">
+                                    <a class="pmd-avatar-list-img" href="javascript:void(0);">
+                                        <img src="data:image/jpeg;base64,${customerReview.base64}"class="rounded-circle" width="50" height="50" style="margin-right: 15px;">
+                                    </a>
+                                    <div class="media-body">
+<!--                                        <div class="pull-right">
+                                            ${customerReview.rating}
+                                        </div>-->
+                                        <h4 class="card-title">${customerReview.customer_name}</h4>
+                                        <p class="card-subtitle">
+
+                                            ${customerReview.mainCategory.cate_name} 
+                                            <br>
+                                            <fmt:formatDate   dateStyle = "long"  value = "${customerReview.created_Date}"/> 
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="commitDesc"> Cards provide context and an entry point to more robust information and views. Don't overload cards with extraneous information or actions.</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                        <div class="card pmd-card">
-                            <div class="card-header d-flex flex-row pmd-card-border">
-                                <a class="pmd-avatar-list-img" href="javascript:void(0);">
-                                    <img src="https://pro.propeller.in/assets/images/Keith-Dowd.png"class="rounded-circle" width="50" height="50" style="margin-right: 15px;">
-                                </a>
-                                <div class="media-body">
-                                    <h4 class="card-title">Two-line item</h4>
-                                    <p class="card-subtitle">Secondary text</p>
+                                <div class="card-body">
+                                    <div class="commitDesc"> ${customerReview.review_comment}</div>
                                 </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="commitDesc"> Cards provide context and an entry point to more robust information and views. Don't overload cards with extraneous information or actions.</div>
-                            </div>
+                            </div>                            
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                        <div class="card pmd-card">
-                            <div class="card-header d-flex flex-row pmd-card-border">
-                                <a class="pmd-avatar-list-img" href="javascript:void(0);">
-                                    <img src="https://source.unsplash.com/ZI6p3i9SbVU/500x350"class="rounded-circle" width="50" height="50" style="margin-right: 15px;">
-                                </a>
-                                <div class="media-body">
-                                    <h4 class="card-title">Two-line item</h4>
-                                    <p class="card-subtitle">Secondary text</p>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="commitDesc"> Cards provide context and an entry point to more robust information and views. Don't overload cards with extraneous information or actions.</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                        <div class="card pmd-card">
-                            <div class="card-header d-flex flex-row pmd-card-border">
-                                <a class="pmd-avatar-list-img" href="javascript:void(0);">
-                                    <img src="https://source.unsplash.com/TMgQMXoglsM/500x350"class="rounded-circle" width="50" height="50" style="margin-right: 15px;">
-                                </a>
-                                <div class="media-body">
-                                    <h4 class="card-title">Two-line item</h4>
-                                    <p class="card-subtitle">Secondary text</p>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="commitDesc"> Cards provide context and an entry point to more robust information and views. Don't overload cards with extraneous information or actions.</div>
-                            </div>
-                        </div>
-                    </div>
+                    </c:forEach>
+
 
                 </div>
-
-
-
-
             </div>
 
         </section>

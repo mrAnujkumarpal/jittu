@@ -1,9 +1,6 @@
 package com.bkn.dao;
 
-import com.bkn.model.Carousel;
-import com.bkn.model.MainCategory;
-import com.bkn.model.Product;
-import com.bkn.model.SubCategory;
+import com.bkn.model.*;
 
 import java.util.List;
 
@@ -15,6 +12,8 @@ public interface DaoHomeService {
     public List<Carousel> carosuleList();
 
     public  List<Product> productList();
+
+    public List<Review> getAllCustomerReview();
 
     public List<Carousel> carosuleListByMainCategoryId(int id);
 }

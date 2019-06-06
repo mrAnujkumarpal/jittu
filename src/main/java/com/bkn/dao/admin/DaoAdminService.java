@@ -1,9 +1,6 @@
 package com.bkn.dao.admin;
 
-import com.bkn.model.Carousel;
-import com.bkn.model.MainCategory;
-import com.bkn.model.Product;
-import com.bkn.model.SubCategory;
+import com.bkn.model.*;
 
 import java.util.List;
 
@@ -16,6 +13,8 @@ public interface DaoAdminService {
     public MainCategory fetchMainCategory(int Id);
 
     public void saveNewProduct(Product product);
+
+    public void saveMyReview(Review review);
 
     public  void saveCarosule(Carousel carousel);
 

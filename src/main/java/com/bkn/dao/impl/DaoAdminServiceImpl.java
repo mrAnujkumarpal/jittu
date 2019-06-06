@@ -1,14 +1,8 @@
 package com.bkn.dao.impl;
 
 import com.bkn.dao.admin.DaoAdminService;
-import com.bkn.model.Carousel;
-import com.bkn.model.MainCategory;
-import com.bkn.model.Product;
-import com.bkn.model.SubCategory;
-import com.bkn.repo.CarouselRepository;
-import com.bkn.repo.MainCategoryRepository;
-import com.bkn.repo.ProductRepository;
-import com.bkn.repo.SubCategoryRepository;
+import com.bkn.model.*;
+import com.bkn.repo.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,6 +19,9 @@ public class DaoAdminServiceImpl implements DaoAdminService {
 
     @Autowired
     private ProductRepository productRepository;
+
+    @Autowired
+    private ReviewRepository reviewRepository;
 
     @Autowired
     private CarouselRepository carouselRepository;
@@ -50,6 +47,12 @@ public class DaoAdminServiceImpl implements DaoAdminService {
     public  SubCategory fetchSubCategoryBySubCateID(int Id){
 
         return  subCategoryRepository.getOne(Id);
+    }
+
+    @Override
+    public void saveMyReview(Review review){
+
+        reviewRepository.save(review);
     }
 
     @Override

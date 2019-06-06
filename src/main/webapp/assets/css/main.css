@@ -6,10 +6,12 @@
     border: 1px solid #ddd;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
 }
+.navbar-collapse ul li a{color: #fff; }
+.navbar-collapse ul li:hover{color: #fff; background-color:#013d2e;  border-bottom: 1px solid red; }
 
 thead > tr {color:#fff; background-color:#f1fff3;}
 tbody{ background-color:#fff;}
-body{  background-color:#f1f3f6;} 
+body{  background-color:#f1f0e0;} 
 .container-fluid{ margin-top:80px}
 #panelBck{
     background-color:#f7f7f7;

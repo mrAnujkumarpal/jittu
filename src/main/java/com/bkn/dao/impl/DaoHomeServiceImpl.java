@@ -1,14 +1,8 @@
 package com.bkn.dao.impl;
 
 import com.bkn.dao.DaoHomeService;
-import com.bkn.model.Carousel;
-import com.bkn.model.MainCategory;
-import com.bkn.model.Product;
-import com.bkn.model.SubCategory;
-import com.bkn.repo.CarouselRepository;
-import com.bkn.repo.MainCategoryRepository;
-import com.bkn.repo.ProductRepository;
-import com.bkn.repo.SubCategoryRepository;
+import com.bkn.model.*;
+import com.bkn.repo.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,6 +21,8 @@ public class DaoHomeServiceImpl implements DaoHomeService {
     @Autowired
     ProductRepository productRepository;
 
+    @Autowired
+    ReviewRepository reviewRepository;
 
     @Autowired
     CarouselRepository carouselRepository;
@@ -46,6 +42,12 @@ public class DaoHomeServiceImpl implements DaoHomeService {
     @Override
     public  List<Product> productList(){
         return  productRepository.findAll();
+    }
+
+    @Override
+    public List<Review> getAllCustomerReview(){
+
+        return reviewRepository.findAll();
     }
 
     @Override

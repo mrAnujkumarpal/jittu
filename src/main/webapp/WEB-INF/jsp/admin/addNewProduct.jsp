@@ -42,7 +42,7 @@
                         <form method="post" action="addNewProduct" enctype="multipart/form-data">
                             <div class = "file-field input-field">
                                 <div class="form-group">
-                                    <label for="sel1">Select list:</label>
+                                    <label for="sel1">Select Sub-category name:</label>
                                     <select class="form-control" name="subCategory" id="sel1">
                                         <c:forEach var="category" items="${allSubCategory}">
                                             <option  value="${category.subcate_id}">${category.subCate_name}</option>

@@ -1,10 +1,7 @@
 package com.bkn.service.impl.admin;
 
 import com.bkn.dao.admin.DaoAdminService;
-import com.bkn.model.Carousel;
-import com.bkn.model.MainCategory;
-import com.bkn.model.Product;
-import com.bkn.model.SubCategory;
+import com.bkn.model.*;
 import com.bkn.service.admin.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,6 +26,12 @@ public class AdminServiceImpl implements AdminService {
     public void addSubCategory(SubCategory subCategory) {
 
         daoAdminService.addSubCategory(subCategory);
+    }
+
+    @Override
+    public  void  saveCustomerReview(Review review){
+
+        daoAdminService.saveMyReview(review);
     }
 
     @Override
