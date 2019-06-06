@@ -1,0 +1,19 @@
+
+
+#addSubCategory{
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+}
+
+thead > tr {color:#fff; background-color:#f1fff3;}
+tbody{ background-color:#fff;}
+body{  background-color:#f1f3f6;} 
+.container-fluid{ margin-top:80px}
+#panelBck{
+    background-color:#f7f7f7;
+    box-shadow: 0 6px 20px 0 rgba(244, 143, 177, 0.5);
+    color:#8d2929;
+}
+
