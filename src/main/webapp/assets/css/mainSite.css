@@ -199,6 +199,9 @@ section .section-title {
     color:#fff;
 }
 
+.checkedStarRating {
+  color: orange;
+}
 .navbar{
     background-image: linear-gradient(45deg, #43a047, #1de9b6) !important;
 }

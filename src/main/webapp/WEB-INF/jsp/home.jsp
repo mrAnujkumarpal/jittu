@@ -79,9 +79,11 @@
                                         <img src="data:image/jpeg;base64,${customerReview.base64}"class="rounded-circle" width="50" height="50" style="margin-right: 15px;">
                                     </a>
                                     <div class="media-body">
-<!--                                        <div class="pull-right">
-                                            ${customerReview.rating}
-                                        </div>-->
+                                         <div class="pull-right">
+                                            <c:forEach var = "i" begin = "1" end = "${customerReview.rating}">
+                                               <span class="fa fa-star-o checkedStarRating"></span>
+                                            </c:forEach>
+                                        </div>
                                         <h4 class="card-title">${customerReview.customer_name}</h4>
                                         <p class="card-subtitle">
 

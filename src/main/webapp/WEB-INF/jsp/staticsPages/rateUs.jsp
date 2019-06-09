@@ -17,13 +17,18 @@
                     <div class="row">
 
                         <c:forEach var="customerReview" items="${customerReview}">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">                           
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                                 <div class="card pmd-card">
                                     <div class="card-header d-flex flex-row pmd-card-border">
                                         <a class="pmd-avatar-list-img" href="javascript:void(0);">
                                             <img src="data:image/jpeg;base64,${customerReview.base64}"class="rounded-circle" width="50" height="50" style="margin-right: 15px;">
                                         </a>
                                         <div class="media-body">
+                                        <div class="pull-right">
+                                            <c:forEach var = "i" begin = "1" end = "${customerReview.rating}">
+                                              <span class="fa fa-star-o checkedStarRating"></span>
+                                             </c:forEach>
+                                            </div>
                                             <h4 class="card-title">${customerReview.customer_name}</h4>
                                             <p class="card-subtitle">
                                                 ${customerReview.mainCategory.cate_name} || 
@@ -54,7 +59,14 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="name">Rate out of Five:</label>
-                                    <input type="text" class="form-control" name="rating" placeholder="* * * * *">
+                                    <select class="form-control" name="rating" id="sel1">
+                                                                          <option  value="1">1</option>
+                                                                          <option  value="2">2</option>
+                                     <option  value="3">3</option>
+                                     <option  value="4">4</option>
+                                     <option  value="5">5</option>
+
+                                      </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="sel1">Select Parent Category:</label>
