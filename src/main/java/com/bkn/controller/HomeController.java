@@ -99,26 +99,21 @@ public class HomeController {
         List<MainCategory> allCate = homeService.getAllMainCatgory();
         if (allCate != null) {
             for (MainCategory cate : allCate) {
-
-               if (cate.getCate_id() == 1) {
-                   allCate.remove(cate);
-               }else {
-                   byte[] encodeBase64 = Base64.encodeBase64(cate.getCate_image());
-                   String base64Encoded = "";
-                   try {
-                       base64Encoded = new String(encodeBase64, "UTF-8");
-                   } catch (Exception eee) {
-                       String message = eee.getMessage();
-                       System.out.println("Exception message " + message);
-                   }
-                   cate.setBase64(base64Encoded);
-               }
+                byte[] encodeBase64 = Base64.encodeBase64(cate.getCate_image());
+                String base64Encoded = "";
+                try {
+                    base64Encoded = new String(encodeBase64, "UTF-8");
+                } catch (Exception eee) {
+                    String message = eee.getMessage();
+                    System.out.println("Exception message " + message);
+                }
+                cate.setBase64(base64Encoded);
             }
         }
 
         mv.addObject("allMainCategory", allCate);
 
-        List<Carousel> carouselList4Page = homeService.carosuleListByMainCategoryId(1);
+        List<Carousel> carouselList4Page = homeService.carosuleListByMainCategoryId(0);
         if (carouselList4Page != null) {
             for (Carousel carosule : carouselList4Page) {
                 byte[] encodeBase64 = Base64.encodeBase64(carosule.getCarousel_image());
