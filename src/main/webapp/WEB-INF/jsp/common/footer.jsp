@@ -31,7 +31,7 @@
                     <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
                     <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
                     <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Blog's</a></li>
-                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Customer Reviews</a></li>
+                    <li><a href="/anujKumarPalResume"><i class="fa fa-angle-double-right"></i>Resume</a></li>
                     <li><a href="/rateOurService"><i class="fa fa-angle-double-right"></i>Rate Our Service</a></li>
                 </ul>
             </div>

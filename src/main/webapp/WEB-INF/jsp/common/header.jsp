@@ -15,32 +15,30 @@
 <nav class="navbar navbar-expand-lg  fixed-top">
     <div class="container">
 
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
             <img src="http://placehold.it/150x50?text=Logo" alt="">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" style="background-color:#3ab262;" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" style="color:black;"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
 
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home
-                        <span class="sr-only">(current)</span>
-                    </a>
+               
+                <li class="nav-item">
+                    <a href=""><span class="fa fa-tag"></span> Offer</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a href="tel:8095446907"><span class="fa fa-phone"></span> 8095446907</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Services</a>
+                    <a href="/rateOurService"><span class="fa fa-pencil-square-o"></span> Feedback</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a href="#download"><span class="fa fa-mobile"></span>  Download app</a></li>
+                <!--<a class="nav-link" href="/caro">Caro</a>-->
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/caro">Caro</a>
-                </li>
+
                 <%--/caro
                 <li class="email-id"><a href="#offer"><span class="fa fa-tag"></span>OFFER</a></li>
                 <li class="contactno"><a href="#packages"><span class="fa fa-money"></span>Package</a></li>

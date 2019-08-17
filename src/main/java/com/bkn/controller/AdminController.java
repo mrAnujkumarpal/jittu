@@ -6,7 +6,6 @@ import com.bkn.model.Product;
 import com.bkn.model.SubCategory;
 import com.bkn.service.HomeService;
 import com.bkn.service.admin.AdminService;
-import org.apache.tomcat.util.codec.binary.Base64;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -29,37 +28,26 @@ public class AdminController {
 
     Date currentDate = new Date();
 
-     @RequestMapping(value = "/caro", method = RequestMethod.GET)
+    @RequestMapping(value = "/anujKumarPalResume", method = RequestMethod.GET)
+    public ModelAndView resume() {
+
+        ModelAndView mv = new ModelAndView("resume");
+        return mv;
+    }
+    @RequestMapping(value = "/caro", method = RequestMethod.GET)
     public ModelAndView test() {
-        
+
         ModelAndView mv = new ModelAndView("caro");
         return mv;
     }
+
     @RequestMapping(value = "/addMainCate", method = RequestMethod.GET)
     public ModelAndView addMainCategory() {
 
         ModelAndView mv = new ModelAndView("admin/addMainCategory");
         List<MainCategory> allCate = homeService.getAllMainCatgory();
-        System.out.println(" allCate " + allCate.size());
 
-        if (allCate != null) {
-            System.out.println("find  details-- " + allCate.size());
-            for (MainCategory cate : allCate) {
-                byte[] encodeBase64 = Base64.encodeBase64(cate.getCate_image());
-                String base64Encoded = "";
-                System.out.println(" Inside 1");
-                try {
-                    base64Encoded = new String(encodeBase64, "UTF-8");
-                    System.out.println("=============DONE==============");
-                } catch (Exception eee) {
-                    String message = eee.getMessage();
-                    System.out.println("Exception message " + message);
-                }
-                cate.setBase64(base64Encoded);
-            }
-        }
-
-        Collections.sort(allCate, (MainCategory main1, MainCategory main2)-> main2.getCate_id()-main1.getCate_id() );
+        Collections.sort(allCate, (MainCategory main1, MainCategory main2) -> main2.getCate_id() - main1.getCate_id());
         mv.addObject("allMainCategory", allCate);
 
         return mv;
@@ -71,10 +59,20 @@ public class AdminController {
 
         ModelAndView mv = new ModelAndView("admin/addSubCategory");
         System.out.println("here 2");
-        mv.addObject("allMainCategory", homeService.getAllMainCatgory());
-        List<SubCategory> subCateList= homeService.getAllSubCategory();
 
-                Collections.sort(subCateList, (SubCategory obj1, SubCategory obj2) -> obj2.getSubcate_id()-obj1.getSubcate_id());
+        List<MainCategory> allMainCate= homeService.getAllMainCatgory();
+
+        Collections.sort(allMainCate, (MainCategory obj1, MainCategory obj2)-> obj1.getCate_id()-obj2.getCate_id());
+
+        System.out.println("here 2 -------------->" +allMainCate.size());
+
+        allMainCate.remove(allMainCate.get(0));
+        mv.addObject("allMainCategory", allMainCate);
+
+
+        List<SubCategory> subCateList = homeService.getAllSubCategory();
+
+        Collections.sort(subCateList, (SubCategory obj1, SubCategory obj2) -> obj2.getSubcate_id() - obj1.getSubcate_id());
         mv.addObject("allSubCategory", subCateList);
         return mv;
 
@@ -85,26 +83,11 @@ public class AdminController {
 
         ModelAndView mv = new ModelAndView("admin/addCarousel");
         mv.addObject("allMainCategory", homeService.getAllMainCatgory());
-        List<Carousel> carouselsList=homeService.getAllCarosule();
-
-        if (carouselsList != null) {
-            for (Carousel carousel : carouselsList) {
-                byte[] encodeBase64 = Base64.encodeBase64(carousel.getCarousel_image());
-                String base64Encoded = "";
-                try {
-                    base64Encoded = new String(encodeBase64, "UTF-8");
-                } catch (Exception eee) {
-                    String message = eee.getMessage();
-                    System.out.println("Exception message " + message);
-                }
-                carousel.setBase64(base64Encoded);
-            }
-        }
-
+        List<Carousel> carouselsList = homeService.getAllCarosule();
 
         Collections.sort(carouselsList, (Carousel object1, Carousel object2) -> object2.getCarousel_id() - object1.getCarousel_id());
 
-    mv.addObject("carouselList",carouselsList);
+        mv.addObject("carouselList", carouselsList);
         return mv;
 
     }
@@ -117,16 +100,13 @@ public class AdminController {
         String carouselHeading = carousel.getCarousel_heading();
         String carouselQutoe = carousel.getCarousel_quotes();
 
-       int mainCateId= carousel.getMainCategory().getCate_id();
+        int mainCateId = carousel.getMainCategory().getCate_id();
 
         System.out.println("mainCateId " + mainCateId);
 
-
-
         System.out.println("carouselHeading " + carouselHeading);
         System.out.println("carouselQutoe " + carouselQutoe);
-                
-                
+
         if (fileUpload.getSize() > 0 && (!fileUpload.getOriginalFilename().isEmpty())) {
 
             Carousel c = new Carousel();
@@ -138,10 +118,9 @@ public class AdminController {
             c.setCarouseImage_name(fileUpload.getOriginalFilename());
             c.setCarouselImageType(fileUpload.getContentType());
 
-           try {
-               c.setCarousel_image(fileUpload.getBytes());
+            try {
+                c.setCarousel_image(fileUpload.getBytes());
             } catch (IOException e) {
-                e.printStackTrace();
             }
             adminService.addCarosule(c);
 
@@ -156,9 +135,9 @@ public class AdminController {
 
         ModelAndView mv = new ModelAndView("admin/addNewProduct");
         System.out.println("here 2");
-        List<Product> productList= homeService.getAllProduct();
-        Collections.sort(productList, (Product prod1, Product prod2) -> prod2.getProd_id()-prod1.getProd_id());
-        mv.addObject("allProducts",productList);
+        List<Product> productList = homeService.getAllProduct();
+        Collections.sort(productList, (Product prod1, Product prod2) -> prod2.getProd_id() - prod1.getProd_id());
+        mv.addObject("allProducts", productList);
         mv.addObject("allSubCategory", homeService.getAllSubCategory());
         return mv;
     }
@@ -197,7 +176,7 @@ public class AdminController {
 
     }
 
-    @RequestMapping(value = "/addMainCate" , method = RequestMethod.POST)
+    @RequestMapping(value = "/addMainCate", method = RequestMethod.POST)
     public ModelAndView addMainCategory(
             @ModelAttribute MainCategory mainCategoryData,
             @RequestParam("mainCategory") MultipartFile fileUpload) {
@@ -219,7 +198,6 @@ public class AdminController {
             adminService.addMainCategory(addNewMainCategory);
 
         }
-
 
         return new ModelAndView("redirect:/addMainCate");
     }

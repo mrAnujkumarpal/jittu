@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.io.IOException;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import org.springframework.web.bind.annotation.PathVariable;
 
@@ -45,19 +47,7 @@ public class HomeController {
         System.out.println(" mainCatId " + mainCatId);
 
         List<Carousel> carouselList4Page = homeService.carosuleListByMainCategoryId(mainCatId);
-        if (carouselList4Page != null) {
-            for (Carousel carosule : carouselList4Page) {
-                byte[] encodeBase64 = Base64.encodeBase64(carosule.getCarousel_image());
-                String base64Encoded = "";
-                try {
-                    base64Encoded = new String(encodeBase64, "UTF-8");
-                } catch (Exception eee) {
-                    String message = eee.getMessage();
-                    System.out.println("Exception message " + message);
-                }
-                carosule.setBase64(base64Encoded);
-            }
-        }
+
         mv.addObject("carouselList", carouselList4Page);
 
         List<Product> productList = adminService.getAllProductsBySubCateory(subcate_id);
@@ -72,23 +62,11 @@ public class HomeController {
     public ModelAndView requestedProducts(@PathVariable("id") int cate_id) {
         ModelAndView mv = new ModelAndView("categories");
         List<Carousel> carouselList4Page = homeService.carosuleListByMainCategoryId(cate_id);
-        if (carouselList4Page != null) {
-            for (Carousel carosule : carouselList4Page) {
-                byte[] encodeBase64 = Base64.encodeBase64(carosule.getCarousel_image());
-                String base64Encoded = "";
-                try {
-                    base64Encoded = new String(encodeBase64, "UTF-8");
-                } catch (Exception eee) {
-                    String message = eee.getMessage();
-                    System.out.println("Exception message " + message);
-                }
-                carosule.setBase64(base64Encoded);
-            }
-        }
-        System.out.println(" cate_id " + cate_id);
+
+        System.out.println(" carouselList4Page  " + carouselList4Page.size());
         mv.addObject("carouselList", carouselList4Page);
         List<SubCategory> subCategoryList = adminService.getAllSubCategoryByMainCateory(cate_id);
-        System.out.println(" SubCategory " + subCategoryList.size());
+        System.out.println(" subCategoryList " + subCategoryList.size());
         mv.addObject("subCategoryList", subCategoryList);
         return mv;
     }
@@ -96,56 +74,17 @@ public class HomeController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public ModelAndView deafult() {
         ModelAndView mv = new ModelAndView("home");
-        List<MainCategory> allCate = homeService.getAllMainCatgory();
-        if (allCate != null) {
-            for (MainCategory cate : allCate) {
-                byte[] encodeBase64 = Base64.encodeBase64(cate.getCate_image());
-                String base64Encoded = "";
-                try {
-                    base64Encoded = new String(encodeBase64, "UTF-8");
-                } catch (Exception eee) {
-                    String message = eee.getMessage();
-                    System.out.println("Exception message " + message);
-                }
-                cate.setBase64(base64Encoded);
-            }
-        }
 
-        mv.addObject("allMainCategory", allCate);
+        List<MainCategory> allMainCate= homeService.getAllMainCatgory();
 
-        List<Carousel> carouselList4Page = homeService.carosuleListByMainCategoryId(0);
-        if (carouselList4Page != null) {
-            for (Carousel carosule : carouselList4Page) {
-                byte[] encodeBase64 = Base64.encodeBase64(carosule.getCarousel_image());
-                String base64Encoded = "";
-                try {
-                    base64Encoded = new String(encodeBase64, "UTF-8");
-                } catch (Exception eee) {
-                    String message = eee.getMessage();
-                    System.out.println("Exception message " + message);
-                }
-                carosule.setBase64(base64Encoded);
-            }
-        }
+        Collections.sort(allMainCate, (MainCategory obj1, MainCategory obj2)-> obj1.getCate_id()-obj2.getCate_id());
+        allMainCate.remove(allMainCate.get(0));
+        mv.addObject("allMainCategory", allMainCate);
 
-        mv.addObject("carouselList", carouselList4Page);
+        mv.addObject("carouselList", homeService.carosuleListByMainCategoryId(1));
 
-        List<Review> customerReview = homeService.getAllCustomerReview();
-        System.out.println("customerReview " + customerReview.size());
-        if (customerReview != null) {
-            for (Review rev : customerReview) {
-                byte[] encodeBase64 = Base64.encodeBase64(rev.getCustomer_Photo());
-                String base64Encoded = "";
-                try {
-                    base64Encoded = new String(encodeBase64, "UTF-8");
-                } catch (Exception eee) {
-                    String message = eee.getMessage();
-                    System.out.println("Exception message " + message);
-                }
-                rev.setBase64(base64Encoded);
-            }
-        }
-        mv.addObject("customerReview", customerReview);
+        mv.addObject("customerReview", homeService.getAllCustomerReview());
+        
         System.out.println("DONE");
         return mv;
     }

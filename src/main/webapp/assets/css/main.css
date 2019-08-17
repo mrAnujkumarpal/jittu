@@ -19,3 +19,8 @@ body{  background-color:#f1f0e0;}
     color:#8d2929;
 }
 
+.nav-item>a>span{
+    margin: 15px;
+    text-decoration: none;
+}
+

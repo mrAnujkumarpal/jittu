@@ -13,7 +13,7 @@
 
 <nav class="navbar navbar-expand-md fixed-top" style="background-color:#007b5e;">
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
             <img src="http://placehold.it/150x50?text=Logo" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
