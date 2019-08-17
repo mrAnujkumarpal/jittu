@@ -139,11 +139,11 @@
 
                             </div>
                             <br>
-                            <div class="heading">BARCODE SCAN  :</div>
+                            <div class="heading">QR Code SCAN  :</div>
                             <br>
                             <div class="row">
-                                <div class="col s12">
-                                    a
+                                <div class="col s12">                                    
+                                    <img src="assets/img/qrcode.png" alt="java developer 4 years experience spring hibernate"/>
                                 </div>
                             </div>
                         </div>
