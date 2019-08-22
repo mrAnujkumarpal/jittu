@@ -9,7 +9,7 @@
         <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
-            .myProjects{
+            .myProjects{ 
                 border-top: 1px solid grey; 
             }
             .profile-card-i {
@@ -19,7 +19,8 @@
                 color:#3ab262;
             }
             .descr{
-                font-size: 12px;
+                font-size: 13px;
+                margin-top: 5px;
             }
             .uniName,.collegeName{
                 font-weight: bolder;
@@ -27,7 +28,7 @@
             }
             .commitDesc{
                 color: #646464;
-                font-size: 11px;
+                font-size: 12px;
             }
 
             .heading{
@@ -44,10 +45,11 @@
                     <div class = "row">
                         <div class="col s12 center-align">
                             <img class="responsive-img circle  z-depth-1" width="100" 
-                                 src="https://people.zoho.com/xebiacom/viewPhoto?erecno=460035000000165115&mode=1&avatarid=135" alt="">
+                                 src="../../assets/img/viewPhoto.jpg" alt=""/>
+
                             <div class="center-align">
                                 <b> ANUJ KUMAR PAL </b>
-                                <h6>Java Backend Developer</h6>
+                                <h6>Software Developer</h6>
                             </div>
                         </div>
                     </div>
@@ -154,7 +156,7 @@
                     <div class="row">
                         <div class="col s12">
                             <div class="headingR">CAREER CONSPECTUS :<br>
-                                <i class="material-icons profile-card-i">trending_flat</i>Having 4+ years of experience as a software developer and solution integrator mainly in Banking & Finance domain.<br>
+                                <i class="material-icons profile-card-i">trending_flat</i>Having over all 5 years of experience as a software developer and solution integrator mainly in Banking & Finance domain.<br>
                                 <i class="material-icons profile-card-i">trending_flat</i>Good understanding of Business, Functional and System Requirement using SRS Documents.<br>
                                 <i class="material-icons profile-card-i">trending_flat</i>Good knowledge of Database technologies and having hands-on of MYSQL, Oracle,Sybase alike.<br>
                                 <i class="material-icons profile-card-i">trending_flat</i>Excellent written and oral communication skills, and team player with a results oriented attitude.<br>
@@ -167,23 +169,20 @@
                             <div class="headingR">PROJECT SUMMARY  :</div>
                             <div class="row myProjects">
                                 <div class="col s9">1.   Amigo Uae-Exchange [UAE]  Amigo Product</div>
-                                <div class="col s3 commitDesc">Team Size: 20</div>
+                                <div class="col s3 commitDesc"><span class=" pull-right">Team Size: 20</span></div>
 
                                 <div class=" col s12 descr">  
-                                    <br>
                                     <span class="collegeName">Client :</span> Unimoni Financial Service LTD Chennai <br>
                                     <span class="collegeName">Technology :</span> Core Java, mysql, Rest webServices, spring boot <br> 
                                     <span class="collegeName">Description :</span> Unimoni is a leading global provider of money transfer, Foreign Exchange, Payment and credit solution.<br>
-
-                                    <span class="collegeName">Responsibilities :</span> Java Backed Developer
+                                    <span class="collegeName">Designation :</span> Java Backed Developer
                                     <ul>
+                                        <li><b> Responsibilities </b></li>
                                         <li> &#187; Development as per SRS & module specification inspection,Estimation.</li> 
                                         <li> &#187; Design deployment document in all stages manually merge the code.</li>
                                         <li> &#187; Integrated new service providers and banks on mobile money platform.</li> 
                                         <li> &#187; Unit testing in respect of different test cases and provide support SME and testing team for banking partners related issues.</li> 
                                     </ul>
-                                    <br>
-
                                 </div>
                             </div>
 
@@ -191,125 +190,109 @@
                             <div class="row myProjects">
 
                                 <div class="col s9">2. Winni E-mail campaign (Internal project - Fully Responsive) </div>
-                                <div class="col s3 commitDesc">Team Size: 2</div>
+                                <div class="col s3 commitDesc"><span class=" pull-right">Team Size: 2</span></div>
 
                                 <div class=" col s12 descr">  
-                                    <br>
+
                                     <span class="collegeName">Technology :</span>  Java,jsp,servlet, mysql, Bootstrap,HTML,CSS,javascript <br> 
                                     <span class="collegeName">Description :</span> Continously connect with our customer and send him/her
                                     promotional mail for upcoming events and offers.<br>
                                     Using this we identify which customer Open/Click/Un-subscribe from mail 
                                     send my mailer.<br>
-
-                                    <span class="collegeName">Responsibilities :</span> Java Backed Developer
+                                    <span class="collegeName">Designation :</span> Java Backed Developer
                                     <ul>
+                                        <li><b> Responsibilities </b></li>
                                         <li> &#187; Development according to provided SRS end-to-end. Using design & develop application architecture/ DBMS schema / JSP.</li> 
                                         <li> &#187; Build creation and development at development environment from scratch.</li>
                                         <li> &#187; Debug the application after finding the bugs by testing team and enhance the existing application.</li> 
                                     </ul>
-                                    <br>
-
                                 </div>
                             </div>
 
                             <div class="row myProjects">
                                 <div class="col s9">3.  Winni Store Front https://www.winni.in (Responsive)</div>
-                                <div class="col s3 commitDesc">Team Size: 5</div>
-
+                                <div class="col s3 commitDesc"><span class=" pull-right">Team Size: 5</span></div>
                                 <div class=" col s12 descr">  
-                                    <br>
                                     <span class="collegeName">Technology :</span> Java, jsp, spring MVC, Hibernate, mysql,  MateralizedCss framework, HTML,CSS, javascript <br> 
                                     <span class="collegeName">Description :</span> Unimoni is a leading global provider of money transfer, Foreign Exchange, Payment and credit solution.<br>
-
-                                    <span class="collegeName">Responsibilities :</span> Java Backed Developer
+                                    <span class="collegeName">Designation :</span> Full stack developer 
                                     <ul>
+                                        <li><b> Responsibilities </b></li>
                                         <li> &#187; Development as per SRS & module specification inspection,Estimation.</li> 
                                         <li> &#187; Design deployment document in all stages manually merge the code.</li>
                                         <li> &#187; Integrated new service providers and banks on mobile money platform.</li> 
                                         <li> &#187; Unit testing in respect of different test cases and provide support SME and testing team for banking partners related issues.</li> 
                                     </ul>
-                                    <br>
 
                                 </div>
                             </div>
 
                             <div class="row myProjects">
                                 <div class="col s9">4. CLOS/SME (Corporate loan origination system / Small & medium entrepreneur loan application) </div>
-                                <div class="col s3 commitDesc">Team Size: 6</div>
+                                <div class="col s3 commitDesc"><span class=" pull-right">Team Size: 6</span></div>
 
                                 <div class=" col s12 descr">  
-                                    <br>
+
                                     <span class="collegeName">Client :</span> Bank Audi Cairo Egypt <br>
                                     <span class="collegeName">Technology :</span> Core Java, mysql,java script, Ajax, iBPS(Newgen product) <br> 
                                     <span class="collegeName">Description :</span> 
                                     This will use to borrow corporate loan from Bank Audi Egypt. Application segrigation done on the basis of CIF-ID.<br>
-
-                                    <span class="collegeName">Responsibilities :</span> Java Backed Developer
+                                    <span class="collegeName">Role & Responsibilities :</span> Java developer 
                                     <ul>
+                                        <li><b> Responsibilities </b></li>
                                         <li> &#187; Development as per SRS & module specification inspection,Estimation.</li> 
                                         <li> &#187; Design deployment document in all stages.</li>
                                         <li> &#187; Unit testing of our develop code in process as per SRS and work flow entire application.</li> 
                                     </ul>
-                                    <br>
-
                                 </div>
                             </div>
 
                             <div class="row myProjects">
                                 <div class="col s9">5.  SFTF/SFTL (Swift Fund Transfer Foreign/ Swift Fund Transfer Local) </div>
-                                <div class="col s3 commitDesc">Team Size: 5</div>
+                                <div class="col s3 commitDesc"><span class=" pull-right">Team Size: 5</span></div>
 
                                 <div class=" col s12 descr">  
-                                    <br>
+
                                     <span class="collegeName">Client :</span> Fidelity Bank Ghana <br>
                                     <span class="collegeName">Technology :</span> Core Java, Oracle 11g, weblogic, Omini Flow & BAM (Newgen product)<br> 
                                     <span class="collegeName">Description :</span> Automate SFTF process to transfer 
                                     any valid amount from Ghana to Foreign/Local, Both process are different they can send 
                                     money from one account to another account under bank guide line and request moves internally
                                     various steps before done.<br>
-
-                                    <span class="collegeName">Responsibilities :</span> Java Backed Developer
+                                    <span class="collegeName">Designation :</span> Full stack developer 
                                     <ul>
+                                        <li><b> Responsibilities </b></li>
                                         <li> &#187; Development as per SRS & module specification inspection,Estimation.</li> 
                                         <li> &#187; Working on project planning and design document creation and developing software
                                             for specific clients considering their requirements.</li> 
                                         <li> &#187; Identify potential issue/road blocks upfront through discussion with the team while execution.</li> 
                                     </ul>
-                                    <br>
-
                                 </div>
                             </div>
 
                             <div class="row myProjects">
                                 <div class="col s9">6.  Get Reimbursement [POC]</div>
-                                <div class="col s3 commitDesc">Team Size: 1</div>
+                                <div class="col s3 commitDesc"><span class=" pull-right">Team Size: 1</span></div>
 
                                 <div class=" col s12 descr">  
-                                    <br>
                                     <span class="collegeName">Client :</span> Xebia Internal project<br>
                                     <span class="collegeName">Technology :</span> spring boot, mysql/postgres, Hibernate(JPA),HTML,CSS,Ajax, MateralizedCss framework <br> 
-                                    <span class="collegeName">Description :</span>.<br>Whats so ever employee did expeances related to company or project
+                                    <span class="collegeName">Description :</span> Whats so ever employee did expeances related to company or project
                                     company is responsible to reimburse those bills its just automate the process.<br>
-                                    <span class="collegeName">Responsibilities :</span> Java Backed Developer
+                                    <span class="collegeName">Responsibilities :</span> Full stack developer 
                                     <ul>
+                                        <li><b> Responsibilities </b></li>
                                         <li> &#187; Development according to provided SRS end-to-end. Using design & develop application architecture/ DBMS schema / JSP.</li> 
                                         <li> &#187; Build creation and development at development environment from scratch.</li>
                                         <li> &#187; Debug the application after finding the bugs by testing team and enhance the existing application.</li> 
                                     </ul>
-                                    <br>
-
                                 </div>
                             </div>
                         </div>
                     </div>
-
-
-
-
-                    <div class="row ">
+                    <div class="row myProjects">
                         <div class="col s12">
                             <div class="headingR">Education  :</div>
-
                             <div class="row">
                                 <div class="col s9"> <b>Bachelor in Technology </b> [CSE]</div>
                                 <div class="col s3 commitDesc">July, 2011 To June, 2014</div>
