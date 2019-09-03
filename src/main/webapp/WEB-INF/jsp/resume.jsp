@@ -10,7 +10,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
             .myProjects{ 
-                border-top: 1px solid grey; 
+                border-top: 1px solid grey;
+                padding-top: 5px;
             }
             .profile-card-i {
                 position: relative;
@@ -41,7 +42,7 @@
     <body>
         <div class="container-fluid" style="padding-top: 5px;">
             <div class = "row">
-                <div class = "col m4 l3">
+                <div class = "col s12 m4 l3">
                     <div class = "row">
                         <div class="col s12 center-align">
                             <img class="responsive-img circle  z-depth-1" width="100" 
@@ -63,15 +64,6 @@
 
                                 </p>
                             </div>
-                            <!--                   
-                                  <div class="heading">CAREER CONSPECTUS :
-                            <ul class="collection">
-                                                                <li><i class="material-icons">send</i> Having 4 years of experience as a software developer and solution integrator.</li>
-                                                                <li><i class="material-icons">send</i>Worked on building environment and configuring servers, network and storage devices from scratch.</li>
-                                                                <li><i class="material-icons">send</i>Excellent written and oral communication skills, and team player with a results oriented attitude.</li>
-                                                            </ul>
-                             </div>
-                            -->
                             <div class="heading">CONTACT INFO :<br>
                                 <i class="material-icons profile-card-i">perm_phone_msg</i> +91 8095446907<br>
                                 <i class="material-icons profile-card-i">email</i>  <span  style="text-transform: none; color:blue;">  mail4uanuj@gmail.co</span><br>
@@ -89,7 +81,7 @@
 
                             </div>
                             <div class="row">
-                                <div class="col s12"> <b>Marbals software (P) Ltd Bangalore[KA] </b></div>
+                                <div class="col s12"> <b>Marlabs software (P) Ltd Bangalore[KA] </b></div>
                                 <div class="col  s6 commitDesc">Java Developer </div><div class="col  s6 commitDesc"> Banking domain</div>
                                 <div class="col  s12 commitDesc">Feb 14, 2016 to Feb 14, 2018</div>
 
@@ -144,15 +136,16 @@
                             <div class="heading">QR Code SCAN  :</div>
                             <br>
                             <div class="row">
-                                <div class="col s12">                                    
-                                    <img src="assets/img/qrcode.png" alt="java developer 4 years experience spring hibernate"/>
+                                <div class="col s12  center-align">                                    
+                                    <img class="responsive-img"
+                                         src="assets/img/qrcode.png" alt="java developer 4 years experience spring hibernate"/>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class = "col s4 m8 l9"  style="border-left: 1px solid #3ab262;">  
+                <div class = "col s12 m8 l9"  style="border-left: 1px solid #3ab262;">  
                     <div class="row">
                         <div class="col s12">
                             <div class="headingR">CAREER CONSPECTUS :<br>
@@ -228,7 +221,7 @@
                             </div>
 
                             <div class="row myProjects">
-                                <div class="col s9">4. CLOS/SME (Corporate loan origination system / Small & medium entrepreneur loan application) </div>
+                                <div class="col s9">4. CLOS/SME (Corporate loan origination system / Small & medium entrepreneur loan application) [Newgen]</div>
                                 <div class="col s3 commitDesc"><span class=" pull-right">Team Size: 6</span></div>
 
                                 <div class=" col s12 descr">  
@@ -248,7 +241,7 @@
                             </div>
 
                             <div class="row myProjects">
-                                <div class="col s9">5.  SFTF/SFTL (Swift Fund Transfer Foreign/ Swift Fund Transfer Local) </div>
+                                <div class="col s9">5.  SFTF/SFTL (Swift Fund Transfer Foreign/ Swift Fund Transfer Local) [Newgen]</div>
                                 <div class="col s3 commitDesc"><span class=" pull-right">Team Size: 5</span></div>
 
                                 <div class=" col s12 descr">  
@@ -295,8 +288,8 @@
                             <div class="headingR">Education  :</div>
                             <div class="row">
                                 <div class="col s9"> <b>Bachelor in Technology </b> [CSE]</div>
-                                <div class="col s3 commitDesc">July, 2011 To June, 2014</div>
-                                <div class=" col s12 descr"> B.Tech from
+                                <div class="col s3 commitDesc"><span class=" pull-right">July, 2011 To June, 2014</span></div>
+                                <div class=" col s12 descr">&#187; B.Tech from
                                     <span class="collegeName">Venkateshwara Institute of Technology , Meerut (UP)</span> Affilated to 
                                     <span class="uniName">MMTU Noida </span> with 72% marks.
                                 </div>
@@ -304,16 +297,16 @@
                             <div class="row">
                                 <div class="col s9"> <b>Polytechnic Diploma  </b> [CSE]</div>
 
-                                <div class="col s3 commitDesc">July, 2008 To June, 2011 </div>
-                                <div class=" col s12 descr">Polytechnic from
+                                <div class="col s3 commitDesc"><span class=" pull-right">July, 2008 To June, 2011</span> </div>
+                                <div class=" col s12 descr">&#187; Polytechnic from
                                     <span class="collegeName">Shri Gopichand college of Pharmacy , Ahera Baghpat (UP)</span> Affilated to 
                                     <span class="uniName">BTE Lucknow </span> with 73% marks.  </div>
                             </div>
                             <div class="row">
                                 <div class="col s9 "> <b>High school </b>[PCM]</div>
 
-                                <div class="col s3 commitDesc">July, 2005 To June, 2006</div>
-                                <div class=" col s12 descr"> High school passed from
+                                <div class="col s3 commitDesc"><span class=" pull-right">July, 2005 To June, 2006</span></div>
+                                <div class=" col s12 descr"> &#187; High school passed from
                                     <span class="collegeName">JLNS Rawapuri Khatauli , Muzaffarnagar (UP)</span> from
                                     <span class="uniName">UP Board Allahabad </span> with 60% marks.
                                 </div>
