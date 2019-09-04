@@ -13,6 +13,10 @@
                 border-top: 1px solid grey;
                 padding-top: 5px;
             }
+            ul li {
+                list-style-type: none;
+                font-size: 15px;
+            }
             .profile-card-i {
                 position: relative;
                 top: 6px;
@@ -20,7 +24,7 @@
                 color:#3ab262;
             }
             .descr{
-                font-size: 13px;
+                font-size: 15px;
                 margin-top: 5px;
             }
             .uniName,.collegeName{
@@ -29,8 +33,12 @@
             }
             .commitDesc{
                 color: #646464;
-                font-size: 12px;
+                font-size: 13px;
             }
+.teamSize{
+color:  #3ab262;
+                font-size: 14px;
+}
 
             .heading{
 
@@ -58,7 +66,7 @@
                         <div class="col s12"> 
 
                             <div class="heading">CAREER OBJECTIVE :
-                                <p class="text-muted mb-5 text-center" style=" font-size: 13px;">
+                                <p class="text-muted mb-5 text-center" style=" font-size: 14px;">
                                     To take up new Challenges to provide innovative and upgrade myself with new trends
                                     in the field of software development to help the organization to growth and committed to the organization values.
 
@@ -73,8 +81,7 @@
                             <br>
 
                             <div class="heading">EMPLOYMENT SCAN  :</div>
-                            <br>
-                            <div class="row">
+                                                        <div class="row" style="margin-top:5px;">
                                 <div class="col s12"> <b>Xebia It Architecture, Gurgaon[HR] </b></div>
                                 <div class="col  s6 commitDesc">Software Consultant </div><div class="col  s6 commitDesc"> Finance domain</div>
                                 <div class="col s12 commitDesc">From Feb 15, 2018 to Today</div>
@@ -97,25 +104,25 @@
                             <div class="heading">SKILL - SET:
                                 <div class="row">
                                     <div class="col s12"> 
-                                        <div class="col s4"> <img  class="responsive-img"  src="https://icon-library.net/images/java-icon-png/java-icon-png-15.jpg" alt="java,corejava,collection"></div>
-                                        <div class="col s4"> <img class="responsive-img"  src="http://fractus.io/wp-content/uploads/2018/07/spring.png" alt="Contact Person"></div>
-                                        <div class="col s4"> <img  class="responsive-img"  src="https://www.techasoft.com/debug/img/spring.png" alt="java,corejava,collection"></div>
+                                        <div class="col s4"> <img class="responsive-img"  src="https://icon-library.net/images/java-icon-png/java-icon-png-15.jpg" alt="java,corejava,collection,String,oops"></div>
+                                        <div class="col s4"> <img class="responsive-img"  src="http://fractus.io/wp-content/uploads/2018/07/spring.png" alt="spring framework, spring mvc, spring boot, spring security"></div>
+                                        <div class="col s4"> <img class="responsive-img"  src="https://www.techasoft.com/debug/img/spring.png" alt="oops,hibernate,jpa,object mapping,collection"></div>
                                     </div>
                                     <div class="col s12">
-                                        <div class="col s4"> <img class="responsive-img"  src="https://cdn.freebiesupply.com/logos/thumbs/2x/mysql-3-logo.png" alt="Contact Person"></div>
-                                        <div class="col s4"> <img class="responsive-img"  src="http://www.medtech.ma/wp-content/uploads/11g.png" alt="Contact Person"></div>
-                                        <div class="col s4"> <img class="responsive-img"  src="https://dbdb.io/media/logos/sybase.png" alt="Contact Person"></div>
+                                        <div class="col s4"> <img class="responsive-img"  src="https://cdn.freebiesupply.com/logos/thumbs/2x/mysql-3-logo.png" alt="sql,my sql, joins, procedures,database"></div>
+                                        <div class="col s4"> <img class="responsive-img"  src="http://www.medtech.ma/wp-content/uploads/11g.png" alt="sql,my sql, joins, procedures,databse"></div>
+                                        <div class="col s4"> <img class="responsive-img"  src="https://dbdb.io/media/logos/sybase.png" alt="sql,my sql, joins, procedures,databse"></div>
                                     </div>
 
                                     <div class="col s12">
-                                        <div class="col s3"> <img class="responsive-img"  src="https://www.encodedna.com/images/theme/bootstrap.png" alt="Contact Person"></div>
-                                        <div class="col s3"> <img  class="responsive-img"  src="https://www.consolebit.com/media/technologies/logo-materialize.png" alt="java,corejava,collection"></div>
-                                        <div class="col s6"> <img  class="responsive-img"  src="https://banner2.kisspng.com/20180406/uew/kisspng-cascading-style-sheets-javascript-html-css3-jquery-logo-5ac78cfa148694.1772279515230271940841.jpg" alt="java,corejava,collection"></div>
+                                        <div class="col s3"> <img class="responsive-img"  src="https://www.encodedna.com/images/theme/bootstrap.png" alt="UI, frontend, responsive-ui, bootstrap"></div>
+                                        <div class="col s3"> <img class="responsive-img"  src="https://www.consolebit.com/media/technologies/logo-materialize.png" alt="materialize,UI, frontend, responsive-ui, bootstrap"></div>
+                                        <div class="col s6"> <img class="responsive-img"  src="https://banner2.kisspng.com/20180406/uew/kisspng-cascading-style-sheets-javascript-html-css3-jquery-logo-5ac78cfa148694.1772279515230271940841.jpg" alt="HTML5,css3,javascript"></div>
                                     </div>
                                     <div class="col s12">
 
-                                        <div class="col s6"> <img class="responsive-img"  src="https://dreamlogic.io/img/brands/logos/netbeans-ide.png" alt="Contact Person"></div>
-                                        <div class="col s6"> <img class="responsive-img"  src="https://dt-cdn.net/images/intellij-519-d4ff21c469.png" alt="Contact Person"></div>
+                                        <div class="col s6"> <img class="responsive-img"  src="https://dreamlogic.io/img/brands/logos/netbeans-ide.png" alt="tools, development tool, netbeans, eclipse"></div>
+                                        <div class="col s6"> <img class="responsive-img"  src="https://dt-cdn.net/images/intellij-519-d4ff21c469.png" alt="tools, development tool, netbeans, eclipse,intellij"></div>
                                     </div>
                                 </div>
                             </div>
@@ -162,7 +169,7 @@
                             <div class="headingR">PROJECT SUMMARY  :</div>
                             <div class="row myProjects">
                                 <div class="col s9">1.   Amigo Uae-Exchange [UAE]  Amigo Product</div>
-                                <div class="col s3 commitDesc"><span class=" pull-right">Team Size: 20</span></div>
+                                <div class="col s3 teamSize"><span class=" pull-right">Team Size: 20</span></div>
 
                                 <div class=" col s12 descr">  
                                     <span class="collegeName">Client :</span> Unimoni Financial Service LTD Chennai <br>
@@ -183,7 +190,7 @@
                             <div class="row myProjects">
 
                                 <div class="col s9">2. Winni E-mail campaign (Internal project - Fully Responsive) </div>
-                                <div class="col s3 commitDesc"><span class=" pull-right">Team Size: 2</span></div>
+                                <div class="col s3 teamSize"><span class=" pull-right">Team Size: 2</span></div>
 
                                 <div class=" col s12 descr">  
 
@@ -204,7 +211,7 @@
 
                             <div class="row myProjects">
                                 <div class="col s9">3.  Winni Store Front https://www.winni.in (Responsive)</div>
-                                <div class="col s3 commitDesc"><span class=" pull-right">Team Size: 5</span></div>
+                                <div class="col s3 teamSize"><span class=" pull-right">Team Size: 5</span></div>
                                 <div class=" col s12 descr">  
                                     <span class="collegeName">Technology :</span> Java, jsp, spring MVC, Hibernate, mysql,  MateralizedCss framework, HTML,CSS, javascript <br> 
                                     <span class="collegeName">Description :</span> Unimoni is a leading global provider of money transfer, Foreign Exchange, Payment and credit solution.<br>
@@ -222,7 +229,7 @@
 
                             <div class="row myProjects">
                                 <div class="col s9">4. CLOS/SME (Corporate loan origination system / Small & medium entrepreneur loan application) [Newgen]</div>
-                                <div class="col s3 commitDesc"><span class=" pull-right">Team Size: 6</span></div>
+                                <div class="col s3 teamSize"><span class=" pull-right">Team Size: 6</span></div>
 
                                 <div class=" col s12 descr">  
 
@@ -242,7 +249,7 @@
 
                             <div class="row myProjects">
                                 <div class="col s9">5.  SFTF/SFTL (Swift Fund Transfer Foreign/ Swift Fund Transfer Local) [Newgen]</div>
-                                <div class="col s3 commitDesc"><span class=" pull-right">Team Size: 5</span></div>
+                                <div class="col s3 teamSize"><span class=" pull-right">Team Size: 5</span></div>
 
                                 <div class=" col s12 descr">  
 
@@ -265,7 +272,7 @@
 
                             <div class="row myProjects">
                                 <div class="col s9">6.  Get Reimbursement [POC]</div>
-                                <div class="col s3 commitDesc"><span class=" pull-right">Team Size: 1</span></div>
+                                <div class="col s3 teamSize"><span class=" pull-right">Team Size: 1</span></div>
 
                                 <div class=" col s12 descr">  
                                     <span class="collegeName">Client :</span> Xebia Internal project<br>
@@ -283,11 +290,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row myProjects">
-                        <div class="col s12">
-                            <div class="headingR">Education  :</div>
-                            <div class="row">
-                                <div class="col s9"> <b>Bachelor in Technology </b> [CSE]</div>
+
+                      <div class="row ">
+                                            <div class="col s12">
+                                                <div class="headingR">EDUCATION  :</div>
+
+
+                            <div class="row myProjects">
+                                <div class="col s9"><b>Bachelor in Technology </b> [CSE]</div>
                                 <div class="col s3 commitDesc"><span class=" pull-right">July, 2011 To June, 2014</span></div>
                                 <div class=" col s12 descr">&#187; B.Tech from
                                     <span class="collegeName">Venkateshwara Institute of Technology , Meerut (UP)</span> Affilated to 
@@ -295,7 +305,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col s9"> <b>Polytechnic Diploma  </b> [CSE]</div>
+                                <div class="col s9"><b>Polytechnic Diploma  </b> [CSE]</div>
 
                                 <div class="col s3 commitDesc"><span class=" pull-right">July, 2008 To June, 2011</span> </div>
                                 <div class=" col s12 descr">&#187; Polytechnic from
@@ -303,7 +313,7 @@
                                     <span class="uniName">BTE Lucknow </span> with 73% marks.  </div>
                             </div>
                             <div class="row">
-                                <div class="col s9 "> <b>High school </b>[PCM]</div>
+                                <div class="col s9 "><b>High school </b>[PCM]</div>
 
                                 <div class="col s3 commitDesc"><span class=" pull-right">July, 2005 To June, 2006</span></div>
                                 <div class=" col s12 descr"> &#187; High school passed from
