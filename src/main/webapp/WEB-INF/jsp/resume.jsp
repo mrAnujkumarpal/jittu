@@ -83,13 +83,13 @@
                             <div class="row">
                                 <div class="col s12"> <b>Marlabs software (P) Ltd Bangalore[KA] </b></div>
                                 <div class="col  s6 commitDesc">Java Developer </div><div class="col  s6 commitDesc"> Banking domain</div>
-                                <div class="col  s12 commitDesc">Feb 14, 2016 to Feb 14, 2018</div>
+                                <div class="col  s12 commitDesc">Sept 6, 2016 to Feb 14, 2018</div>
 
                             </div>
                             <div class="row">
                                 <div class="col s12"> <b>Dhawala online software (P) Ltd, Bangalore[KA]</b></div>
                                 <div class="col  s6 commitDesc">Web Developer </div><div class="col  s6 commitDesc"> E-commerce domain</div>
-                                <div class="col  s12 commitDesc">May, 2015 to June 2016</div>
+                                <div class="col  s12 commitDesc">May, 2015 to Aug 2016</div>
 
                             </div>
 
