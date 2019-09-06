@@ -156,7 +156,7 @@ color:  #3ab262;
                     <div class="row">
                         <div class="col s12">
                             <div class="headingR">CAREER CONSPECTUS :<br>
-                                <i class="material-icons profile-card-i">trending_flat</i>Having over all 5 years of experience as a software developer and solution integrator mainly in Banking & Finance domain.<br>
+                                <i class="material-icons profile-card-i">trending_flat</i>Having over all 4+ years of experience as a software developer and solution integrator mainly in Banking & Finance domain.<br>
                                 <i class="material-icons profile-card-i">trending_flat</i>Good understanding of Business, Functional and System Requirement using SRS Documents.<br>
                                 <i class="material-icons profile-card-i">trending_flat</i>Good knowledge of Database technologies and having hands-on of MYSQL, Oracle,Sybase alike.<br>
                                 <i class="material-icons profile-card-i">trending_flat</i>Excellent written and oral communication skills, and team player with a results oriented attitude.<br>
